@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    width: 600px;
+    background-color: #445A6F;
+    color: #FFFFFF;
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.wrapper div {
+    background-color: #e63946;
+    padding: 20px;
+    margin-top: 10px;
+    flex: 1;
+    border-radius: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border: none;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #2a9d8f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #21867a;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+
+/* 
+p.change {
+    width: 2px;
+} */
+
+
+/*Add Smooth Theme Transition */
+
+body,
+.container,
+.wrapper div,
+input,
+button {
+    transition: background-color 1.0s ease, color 1.1s ease;
+}
+
+
+/* Dark mode styling */
+
+.dark-mode {
+    background-color: #121212;
+    color: #FFFFFF;
+}
+
+.dark-mode .container {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+.dark-mode .wrapper div {
+    background-color: #333333;
+}
+
+.dark-mode input {
+    background-color: #222;
+    color: #fff;
+}
+
+.dark-mode button {
+    background-color: #444;
+}
+
+.dark-mode button:hover {
+    background-color: #666;
+}
+
+.container {
+    max-width: 90%;
+    width: 600px;
+    background-color: #445A6F;
+    color: #FFFFFF;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 40px auto;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.wrapper div {
+    flex: 1 1 30%;
+    background-color: #e63946;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.results,
+.history {
+    margin-top: 30px;
+}
+
+
+/* Table Styling */
+
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    color: #000;
+    font-size: 14px;
+    text-align: center;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper {
+        flex-direction: column;
+    }
+    .wrapper div {
+        width: 100%;
+    }
+    table {
+        font-size: 12px;
+    }
+}

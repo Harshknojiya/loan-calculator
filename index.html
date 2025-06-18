@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Loan Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- toggle theme button-->
+        <div style="text-align: right;">
+            <button id="toggleTheme">🌙 Dark Mode</button>
+        </div>
+
+        <!-- Place near top inside .container -->
+        <div id="error" style="color: yellow; font-size: 14px; margin-top: 10px;"></div>
+        <br>
+        <h1>Loan Calculator</h1>
+        <div class="wrapper">
+            <div>
+                <p>Loan Amount (₹)</p>
+                <input id="amount" type="number" placeholder="e.g. 100000">
+            </div>
+            <div>
+                <p>Interest Rate(%)</p>
+                <input id="interest" type="number" placeholder="e.g. 10">
+            </div>
+            <div>
+                <p>Tenure (months)</p>
+                <input id="tenure" type="number" placeholder="e.g. 12">
+            </div>
+        </div>
+        <button type="button" id="calculateBtn">Calculate</button>
+        <br>
+        <br>
+        <h2>Monthly EMI: <span id="emi">--</span></h2>
+        <h2>Total Amount: <span id="total">--</span></h2>
+        <h2>Total Interest: <span id="interestAmount">--</span></h2>
+
+        <!-- History Table Now Below -->
+        <br>
+        <div class="history">
+            <h2>Loan Repayment Schedule</h2>
+            <div class="table-wrapper">
+                <table id="historyTable">
+                    <thead>
+                        <tr>
+                            <th>Month</th>
+                            <th>EMI (₹)</th>
+                            <th>Principal (₹)</th>
+                            <th>Interest (₹)</th>
+                            <th>Balance (₹)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+</body>
+
+</html>
